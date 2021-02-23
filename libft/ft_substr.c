@@ -6,11 +6,12 @@
 /*   By: marreche <marreche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 14:58:55 by marreche          #+#    #+#             */
-/*   Updated: 2021/02/17 12:29:20 by marreche         ###   ########.fr       */
+/*   Updated: 2021/02/22 13:18:28 by marreche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 /*
 ** This function allocates memory and returns a substring

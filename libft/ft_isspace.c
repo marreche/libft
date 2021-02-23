@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marreche <marreche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/21 12:18:39 by marreche          #+#    #+#             */
-/*   Updated: 2021/02/23 17:45:40 by marreche         ###   ########.fr       */
+/*   Created: 2021/02/23 17:46:44 by marreche          #+#    #+#             */
+/*   Updated: 2021/02/23 17:53:19 by marreche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** This function finds the length of a string.
-*/
-
-size_t		ft_strlen(const char *str)
+int		ft_isspace(int c)
 {
-	int i;
-
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	return (c == ' ' || c == '\t' 
+	|| c  == '\n' || c  == '\v'
+	|| c  == '\f' || c  == '\r' ? 1 : 0);
 }
