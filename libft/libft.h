@@ -6,7 +6,7 @@
 /*   By: marreche <marreche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 16:24:10 by marreche          #+#    #+#             */
-/*   Updated: 2021/02/23 17:54:02 by marreche         ###   ########.fr       */
+/*   Updated: 2021/04/08 15:48:10 by marreche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,8 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
-
+char				*ft_strnew(size_t size);
+void				ft_del(char **as);
+char				*ft_strncpy(char *s1, const char *s2, size_t n);
+char				*ft_strndup(const char *s, size_t n);
 #endif

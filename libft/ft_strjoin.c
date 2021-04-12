@@ -6,7 +6,7 @@
 /*   By: marreche <marreche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 15:46:59 by marreche          #+#    #+#             */
-/*   Updated: 2021/02/11 12:20:51 by marreche         ###   ########.fr       */
+/*   Updated: 2021/03/04 13:08:37 by marreche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,29 +20,24 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*new;
-	size_t	end;
-	int		i;
+	size_t	s1_len;
+	size_t	s2_len;
+	size_t	stot_len;
+	char	*rtn;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
+		return (ft_strdup(""));
+	if (s1 && !s2)
+		return (ft_strdup(s1));
+	if (!s1 && s2)
+		return (ft_strdup(s2));
+	s1_len = ft_strlen((char *)s1);
+	s2_len = ft_strlen(s2);
+	stot_len = s1_len + s2_len + 1;
+	if(!(rtn = malloc(sizeof(char) * stot_len)))
 		return (0);
-	i = 0;
-	end = ft_strlen(s1);
-	if (!(new = (char *)malloc(sizeof(char) *
-	(ft_strlen(s1) + ft_strlen(s2) + 1))))
-		return (NULL);
-	while (s1[i] != '\0')
-	{
-		new[i] = s1[i];
-		i++;
-	}
-	i = 0;
-	while (s2[i] != '\0')
-	{
-		new[end] = s2[i];
-		i++;
-		end++;
-	}
-	new[end] = '\0';
-	return (new);
+	ft_memmove(rtn, s1, s1_len);
+	ft_memmove(rtn + s1_len, s2, s2_len);
+	rtn[stot_len - 1] = '\0';
+	return (rtn);
 }

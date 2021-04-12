@@ -6,7 +6,7 @@
 /*   By: marreche <marreche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 11:06:03 by marreche          #+#    #+#             */
-/*   Updated: 2021/02/19 13:50:08 by marreche         ###   ########.fr       */
+/*   Updated: 2021/04/09 17:04:19 by marreche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int		ft_wordcount(char const *s, char c)
 ** within a max length.
 */
 
-static char		*ft_strncpy(char *s1, const char *s2, size_t n)
+char		*ft_strncpy(char *s1, const char *s2, size_t n)
 {
 	size_t size;
 
@@ -70,7 +70,7 @@ static char		*ft_strncpy(char *s1, const char *s2, size_t n)
 ** string.
 */
 
-static char		*ft_strndup(const char *s, size_t n)
+char		*ft_strndup(const char *s, size_t n)
 {
 	char			*str;
 

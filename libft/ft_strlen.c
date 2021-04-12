@@ -6,7 +6,7 @@
 /*   By: marreche <marreche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:18:39 by marreche          #+#    #+#             */
-/*   Updated: 2021/02/23 17:45:40 by marreche         ###   ########.fr       */
+/*   Updated: 2021/04/09 17:02:41 by marreche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t		ft_strlen(const char *str)
 	int i;
 
 	if (!str)
-		return (NULL);
+		return (0);
 	i = 0;
 	while (str[i])
 		i++;

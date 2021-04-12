@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_del.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marreche <marreche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/08 11:16:55 by marreche          #+#    #+#             */
-/*   Updated: 2021/03/03 13:25:51 by marreche         ###   ########.fr       */
+/*   Created: 2021/02/25 16:26:53 by marreche          #+#    #+#             */
+/*   Updated: 2021/04/12 13:02:36 by marreche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** This function displays the string "s" to
-** the desired file descriptor "fd".
-*/
-
-void	ft_putstr_fd(char *s, int fd)
+void	ft_del(char **as)
 {
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
+	if (*as)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }

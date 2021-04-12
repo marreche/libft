@@ -6,7 +6,7 @@
 #    By: marreche <marreche@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/03 14:39:42 by marreche          #+#    #+#              #
-#    Updated: 2021/02/22 13:18:53 by marreche         ###   ########.fr        #
+#    Updated: 2021/04/09 18:00:32 by marreche         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,21 +28,18 @@ RM = rm -f
 LIBC = ar -rcs
 
 $(NAME): $(OBJS)
-		$(LIBC) $(NAME) $(OBJS)
-	@echo "Compiling complete!"
+		@$(LIBC) $(NAME) $(OBJS)
 
 all: $(NAME)
 
 bonus: $(OBJS) $(OBJS_BONUS)
 		$(LIBC) $(NAME) $(OBJS) $(OBJS_BONUS)
-	@echo "Bonus functions compiled!"
 
 fclean: clean
 		$(RM) $(NAME)
 
 clean:
 		$(RM) $(OBJS) $(OBJS_BONUS)
-	@echo "Cleanup done!"
 
 re:	fclean all
 

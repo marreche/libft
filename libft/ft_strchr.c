@@ -6,7 +6,7 @@
 /*   By: marreche <marreche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 15:48:49 by marreche          #+#    #+#             */
-/*   Updated: 2021/02/19 13:53:55 by marreche         ###   ########.fr       */
+/*   Updated: 2021/03/10 16:37:46 by marreche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *str, int c)
 	while (*str != (char)c)
 	{
 		if (!*str++)
-			return (0);
+			return (NULL);
 	}
 	return (char *)str;
 }

@@ -6,7 +6,7 @@
 /*   By: marreche <marreche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 16:05:35 by marreche          #+#    #+#             */
-/*   Updated: 2021/02/12 17:00:51 by marreche         ###   ########.fr       */
+/*   Updated: 2021/04/12 13:03:34 by marreche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		s = s + len - 1;
 		d = d + len - 1;
 		while (len--)
-		{
 			*d-- = *s--;
-		}
 	}
 	else
 	{
 		while (len--)
-		{
 			*d++ = *s++;
-		}
 	}
 	return (dst);
 }
