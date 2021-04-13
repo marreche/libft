@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_del.c                                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marreche <marreche@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marreche <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 16:26:53 by marreche          #+#    #+#             */
-/*   Updated: 2021/04/13 13:42:20 by marreche         ###   ########.fr       */
+/*   Created: 2021/04/13 13:34:27 by marreche          #+#    #+#             */
+/*   Updated: 2021/04/13 13:42:04 by marreche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_del(char **as)
+int		ft_putstr(char *str)
 {
-	if (*as)
+	int res;
+
+	if (!str)
+		return (0);
+	res = 0;
+	while (*str)
 	{
-		free(*as);
-		*as = NULL;
+		res += ft_putchar(*str);
+		str++;
 	}
+	return (res);
 }
